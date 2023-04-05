@@ -1,0 +1,24 @@
+ESTRUTURA DE DADOS CLÁSSICA
+
+1. Lista Ligada - Coleção Ordenada de valores onde cada elemento aponta para o próximo.
+
+2. Array - Coleção de elementos que podem ser identificados por um índice.
+
+3. Fila (Queue) - Coleção de elementos, onde o primeiro elemento retirado da lista deve ser o primeiro elemento adicionado a fila.
+Também chamadas de listas FIFO (primeiro a entrar / primeiro a sair)
+
+4. Pilha (Stack) - Coleção de elementos onde o primeiro elemento a ser retirado deve ser o último elemento adicionado.
+Também chamadas de listas LIFO (último a entrar / primeiro a sair)
+
+5. Árvore (Tree) - Conjunto de elementos chamados de nós (ou nodes) organizados em estrutura hierárquica (não sequencial), ou seja, podendo estar "abaixo" ou "acima" de outros nós.
+Pense em uma árvore genealógica, na estrutura das pastas no seu computador ou na estrutura de uma página HTML.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+
+ESTRUTURA DE DADOS NO JAVASCRIPT
+
+1. Listas (Arrays)
+2. Dicionários (Objetos)
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+
