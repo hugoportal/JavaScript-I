@@ -6,39 +6,59 @@ do {
 
   opcao = prompt(
     "Imóveis Cadastrados: " +
-      qtdImoveis +
+      imoveis.length +
       "\nEscolha uma opção:\n" +
-      "1 - Mostrar Imóveis\n2 - Salvar Imóvel\n3 - Sair"
+      "1 - Mostrar Imóveis\n2 - Novo Imóvel\n3 - Sair"
   );
 
   switch (opcao) {
     case "1":
-      let verImoveis = {};
-      if (qtdImoveis !== 0) {
-        for (let i = 0; i < qtdImoveis; i++) {
-          for (let y = 0; y < imoveis[i].length; y++) {
-            //console.log(imoveis[i].length);
-            console.log(imoveis[i][y]);
-            verImoveis += "Proprietário = ";
-          }
-        }
-      } else {
-        alert("Não há imóveis cadastrados.");
+      for (let i = 0; i < qtdImoveis; i++) {
+        alert(
+          i +
+            1 +
+            "° " +
+            "Imovél " +
+            "\nProprietário: " +
+            imoveis[i].proprietario +
+            "\nQtd de Quartos: " +
+            imoveis[i].quartos +
+            "\nQtd de Banheiros: " +
+            imoveis[i].banheiros +
+            "\nQtd de Vagas de Garagem: " +
+            imoveis[i].garagem
+        );
       }
+
       break;
     case "2":
-      console.log("Entrou no valor Zero");
-      let novosDados = [];
-      let nome = prompt("Insira o nome do proprietário").toUpperCase();
-      novosDados.push(nome);
-      let qtdQuarto = prompt("Insira a quantidade de quarto(s)");
-      novosDados.push(qtdQuarto);
-      let qtdBanheiro = prompt("Insira a quantidade de banheiro(s)");
-      novosDados.push(qtdBanheiro);
-      let qtdGaragem = prompt("Insira a quantidade de garagem/garagens");
-      novosDados.push(qtdGaragem);
+      const imovel = {};
 
-      imoveis.push(novosDados);
+      imovel.proprietario = prompt(
+        "Insira o nome do proprietário"
+      ).toUpperCase();
+      imovel.quartos = prompt("Insira a quantidade de quarto(s)");
+      imovel.banheiros = prompt("Insira a quantidade de banheiro(s)");
+      imovel.garagem = prompt("Insira a quantidade de garagem/garagens");
+
+      const confirmacao = confirm(
+        "Salvar este imóvel?" +
+          "\nProprietário: " +
+          imovel.proprietario +
+          "\nQuartos: " +
+          imovel.quartos +
+          "\nBanheiros: " +
+          imovel.banheiros +
+          "\nGaragem: " +
+          imovel.garagem
+      );
+
+      if (confirmacao) {
+        imoveis.push(imovel);
+        alert("Imóvel salvo com sucesso!");
+      } else {
+        alert("Voltando ao Menu!");
+      }
 
       break;
     case "3":
