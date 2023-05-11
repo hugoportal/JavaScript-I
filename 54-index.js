@@ -62,6 +62,7 @@ const racas = personagens.reduce(function (acumulador, personagem) {
 //--------------------------------------
 
 // sort: ordena os elementos de um array a partir de comparações entre duplas de elementos
+// altera o array
 personagens.sort(function (a, b) {
   return a.nivel - b.nivel;
 });
