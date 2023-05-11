@@ -60,8 +60,14 @@ const racas = personagens.reduce(function (acumulador, personagem) {
 }, {});
 
 //--------------------------------------
-
+// Se não quiser alterar o array pode-se utilizar o slice e criar um novo:
+const personagensOrdenados = personagens.slice().sort(function (a, b) {
+  return a.nivel - b.nivel;
+});
 // sort: ordena os elementos de um array a partir de comparações entre duplas de elementos
+// altera o array se utilizar o sort diretamente no array conforme abaixo:
+/*
 personagens.sort(function (a, b) {
   return a.nivel - b.nivel;
 });
+*/
